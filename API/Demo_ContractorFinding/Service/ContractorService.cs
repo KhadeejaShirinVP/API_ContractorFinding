@@ -127,10 +127,25 @@ namespace Service
         //}
 
         //DELETE
-        public bool DeleteContractor(ContractorDetail contractorDetail)
+        //public bool DeleteContractor( string license,ContractorDetail contractorDetail)
+        //{
+
+        //    ContractorDetail contractor = contractorFindingDemoContext.ContractorDetails.Where(x => x.License == contractorDetail.License).FirstOrDefault()!;
+        //    if (contractor != null)
+        //    {
+        //        contractorFindingDemoContext.ContractorDetails.Remove(contractor);
+        //        contractorFindingDemoContext.SaveChanges();
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+        public bool DeleteContractor(string License)
         {
 
-            ContractorDetail contractor = contractorFindingDemoContext.ContractorDetails.Where(x => x.License == contractorDetail.License).FirstOrDefault()!;
+            ContractorDetail contractor = contractorFindingDemoContext.ContractorDetails.Where(x => x.License == License).FirstOrDefault()!;
             if (contractor != null)
             {
                 contractorFindingDemoContext.ContractorDetails.Remove(contractor);

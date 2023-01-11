@@ -22,7 +22,7 @@ namespace API.Controllers
         }
 
         //create
-        [HttpPut]
+        [HttpPost("AddCustomerDetails")]
         public JsonResult CreateContractor(TbCustomer tbCustomer)
         {
             try
@@ -58,7 +58,7 @@ namespace API.Controllers
         }
 
         //UPDATE
-        [HttpPost]
+        [HttpPut("UpdateDetails")]
         public JsonResult UpdateCustomerDetails(TbCustomer tbCustomer)
         {
             try

@@ -16,7 +16,7 @@ namespace Service.Interfaces
         //Task<IEnumerable<ContractorView>> GetContractorDetails();
          bool updateContractorDetails(ContractorDetail contractorDetail);
 
-         bool DeleteContractor(ContractorDetail contractorDetail);
+        bool DeleteContractor(string License);
 
     }
 }

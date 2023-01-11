@@ -108,17 +108,34 @@ namespace API.Controllers
         /// </summary>
         /// <param name="contractorDetail"></param>
         /// <returns></returns>
-        [HttpDelete]
-        public JsonResult DeleteContractor(ContractorDetail contractorDetail)
+        //[HttpDelete("DeleteContractor")]
+        //public JsonResult DeleteContractor(string license,ContractorDetail contractorDetail)
+        //{
+        //    try
+        //    {
+        //        var contractor = contractorService.DeleteContractor(license,contractorDetail);
+        //        if (contractor == true)
+        //        {
+        //            return new JsonResult(new CrudStatus() { Status = true, Message = "Deleted successful!" });
+        //        }
+        //        return new JsonResult(new CrudStatus() { Status = false,Message="Delete Failed" });
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return new JsonResult(ex.Message);
+        //    }
+        //}
+        [HttpDelete("DeleteContractor")]
+        public JsonResult DeleteContractor(string License)
         {
             try
             {
-                var contractor = contractorService.DeleteContractor(contractorDetail);
+                var contractor = contractorService.DeleteContractor(License);
                 if (contractor == true)
                 {
                     return new JsonResult(new CrudStatus() { Status = true, Message = "Deleted successful!" });
                 }
-                return new JsonResult(new CrudStatus() { Status = false });
+                return new JsonResult(new CrudStatus() { Status = false, Message = "Delete Failed" });
             }
             catch (Exception ex)
             {
