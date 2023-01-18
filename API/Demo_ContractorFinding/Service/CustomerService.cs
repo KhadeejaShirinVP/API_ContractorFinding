@@ -104,9 +104,21 @@ namespace Service
         }
 
         //DELETE
-        public bool DeleteCustomer(TbCustomer tbCustomer)
+        //public bool DeleteCustomer(TbCustomer tbCustomer)
+        //{
+        //    TbCustomer customer = contractorFindingDemoContext.TbCustomers.Where(c => c.RegistrationNo == tbCustomer.RegistrationNo).FirstOrDefault()!;
+        //    if (customer != null)
+        //    {
+        //        contractorFindingDemoContext.TbCustomers.Remove(customer);
+        //        contractorFindingDemoContext.SaveChanges();
+        //        return true;
+        //    }
+        //    return false;
+        //}
+
+        public bool DeleteCustomer(string RegistrationNo)
         {
-            TbCustomer customer = contractorFindingDemoContext.TbCustomers.Where(c => c.RegistrationNo == tbCustomer.RegistrationNo).FirstOrDefault()!;
+            TbCustomer customer = contractorFindingDemoContext.TbCustomers.Where(c => c.RegistrationNo ==RegistrationNo).FirstOrDefault()!;
             if (customer != null)
             {
                 contractorFindingDemoContext.TbCustomers.Remove(customer);

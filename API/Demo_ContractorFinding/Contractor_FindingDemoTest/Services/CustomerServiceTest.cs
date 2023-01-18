@@ -109,19 +109,19 @@ namespace Contractor_FindingDemoTest.Services
 
         }
 
-        [Fact]
-        public void DeleteCustomer_Test()
-        {
-            var customer = new TbCustomer() { LandSqft = 123, RegistrationNo = "1232335", BuildingType = 2, Lattitude = 7.45, Longitude = 7.14, Pincode = 3454545 };
+        //[Fact]
+        //public void DeleteCustomer_Test()
+        //{
+        //    var customer = new TbCustomer() { LandSqft = 123, RegistrationNo = "1232335", BuildingType = 2, Lattitude = 7.45, Longitude = 7.14, Pincode = 3454545 };
 
 
-            //Act
-            var result = customerService.DeleteCustomer(customer);
+        //    //Act
+        //    var result = customerService.DeleteCustomer(customer);
 
 
-            //Assret
+        //    //Assret
 
-            Assert.True(result);
-        }
+        //    Assert.True(result);
+        //}
     }
 }

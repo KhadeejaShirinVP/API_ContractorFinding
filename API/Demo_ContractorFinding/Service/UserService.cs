@@ -148,7 +148,6 @@ namespace Service
         //for forgotpassword case(Update)
         public bool ForgotPassword(Login login)
         {
-
             var userWithSameEmail = contractorFindingDemoContext.TbUsers.Where(m => m.EmailId == login.EmailId).SingleOrDefault();
             if (userWithSameEmail == null)
             {
@@ -156,7 +155,6 @@ namespace Service
             }
             else
             {
-
                 string encrptnewpassword = encrypt.EncodePasswordToBase64(login.Password);
                 string encrptconfirmpassword = encrypt.EncodePasswordToBase64(login.confirmPassword);
                 if (encrptnewpassword == encrptconfirmpassword)
@@ -171,7 +169,6 @@ namespace Service
                 {
                     return false;
                 }
-
             }
         }
 

@@ -14,7 +14,7 @@ namespace Service.Interfaces
         List<CustomerDisplay> GetCustomerDetails();
         bool UpdateCustomerDetails(TbCustomer tbCustomer);
 
-        bool DeleteCustomer(TbCustomer tbCustomer);
+        bool DeleteCustomer(string RegistrationNo);
         public List<ContractorDisplay> SearchBypincode(int pincode);
         string SendMessage(long phonenumber, string reggistration, int id);
 

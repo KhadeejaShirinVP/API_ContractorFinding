@@ -78,12 +78,12 @@ namespace API.Controllers
         }
 
         //DELETE
-        [HttpDelete]
-        public JsonResult DeleteCustomer(TbCustomer tbCustomer)
+        [HttpDelete("DeleteCustomer")]
+        public JsonResult DeleteCustomer(string RegistrationNo)
         {
             try
             {
-                var customer = customerService.DeleteCustomer(tbCustomer);
+                var customer = customerService.DeleteCustomer(RegistrationNo);
                 if (customer == true)
                 {
                     return new JsonResult(new CrudStatus() { Status = true, Message = "Deleted successfully!" });
